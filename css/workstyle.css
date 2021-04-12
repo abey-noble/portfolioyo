@@ -1,0 +1,66 @@
+
+.projimages{
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projimages:hover{
+    opacity: 0.7;
+    
+}
+
+.projtitle:link{
+    width: 77%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+    
+}
+.projtitle:active{
+    text-decoration: line-through;
+    color:black;
+}
+
+.projtitle:hover{
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+.title{
+    color:black;
+    text-align: left;
+}
+
+
+.project_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50px auto 50px auto;
+}
+
+.project1{
+    grid-row: 1 / span 1;
+}
+
+.project2{
+    grid-row: 3 / span 1;
+}
+
+.project3{
+    grid-row: 5 / span 1;
+}
+
+/* main div{
+    background-color: #9297A0;
+    width: 77%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+} */
+
+

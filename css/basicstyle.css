@@ -5,44 +5,58 @@
     font-family: 'Lateef', cursive;
 } */
 
+@media screen and (max-width: 500px){
+    /* NAVIGATION */
+    .navbar{
+        list-style-type: none;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+        font-size: 20px;
+    }
+    a.navitem5{
+        grid-row: 1 / span 1;
+    }
+    a.navitem1{
+        grid-row: 2 / span 1;
+    }
+    a.navitem2{
+        grid-row: 3 / span 1;
+    }
+    a.navitem3{
+        grid-row: 4 / span 1;
+    }
+    a.navitem4{
+        grid-row: 5 / span 1;
+    }
+    .menu_web{
+        display: none;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+    }
+}
 
-/* LOGO */
-/* .logo{
-    width: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
+
+/* SKIP */
+.skip{
+    font-size: 20px;
+    padding: 10px;
+    position: absolute;
+    left: -1000px;
+}
+
+.skip:focus{
+    left: 0;
+}
 
 /* HEADER DIV */
-nav div{
+nav .naming_stuff{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows:  50px auto auto auto;
+    grid-template-rows:  50px auto 50px;
 }
-
-
-/* MENU ICON */
-/* .menuicon{
-    height: 50px;
-    width: 50px;
-    grid-column: 10 / span 2;
-    grid-row: 1 / span 1;
-    justify-self: center;
-    align-self: center;
-} */
-
-/* USER RESEARCH PORTFOLIO */
-.user{
-    grid-column: 2 / span 10;
-    grid-row: 1 / span 1;
-    font-size: 16px;
-    justify-self: center;
-    align-self: center;
-    color: #9297A0;
-}
-
 
 /* ABEY NOBLE */
 .name{
@@ -51,85 +65,12 @@ nav div{
     grid-row: 2 / span 1;
     justify-self: start;
     align-self: center;
+    font-weight: normal;
 }
 
-/* DOWN ARROW */
-/* .downarrow{
-    height: 50px;
-    width: 50px;
-    grid-column: 6 / span 2;
-    grid-row: 4 / span 1;
-    justify-self: center;
-    align-self: center;
-} */
 
-
-/* ABOUT ME */
-/* .tagline{
-    font-size: 25px;
-    grid-column: 2 / span 10;
-    grid-row: 5 / span 1;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-} */
-
-/* NAVIGATION */
-.navbar{
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-}
-
-/* a.navitem1{
-    font-size: 20px;
-    grid-column: 2 / span 1;
-}
-a.navitem2{
-    font-size: 20px;
-    grid-column: 3 / span 1;
-}
-a.navitem3{
-    font-size: 20px;
-    grid-column: 4 / span 1;
-}
-a.navitem4{
-    font-size: 20px;
-    grid-column: 5 / span 1;
-} */
-
-/* a.navitem:link{
-    font-size: 20px;
-    justify-self: center;
-    align-self: center;
-    text-decoration: none;
-    color: black;
-}
-
-a.navitem:hover a.navitem:active{
-    text-decoration:line-through;
-    color:black;
-}
-
-a.navitem:visted{
-    color:black;
-    text-decoration: line-through;
-} */
-
-
-
-
-
-/* NAVIGATION */
-/* .navbar{
-    
-    list-style-type: none;
-    text-align: center;
-    padding-inline-start: 0;
-} */
 a.navitem:link{
-    font-size: 20px;
+   
     text-decoration: none;
     color: black;
     justify-self: center;
@@ -144,53 +85,89 @@ a.navitem:hover, a.navitem:active{
 a.currentpage:link, a.currentpage:visited{
     text-decoration: line-through;   
 }
-/* .navitem:nth-child(1), .navitem:nth-child(2), .navitem:nth-child(3){
-    padding-bottom: 25px;
-} */
-
+nav div a{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
 /* HORIZONTAL LINE */
-hr{
+hr, div hr{
+    display:block;
+    margin: auto;
+    margin: auto;
     width: 80%;
 }
 
-
 /* FOOTER */
-/* footer div{
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #9297A0;
-    text-align: center;
-
-}
-footer div div{
-    padding: 40px 0;
-}
-footer div p{
-    padding: 0;
-    margin: 0;
-} */
-
 footer div p{
     text-align: center;
     font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main p{
+    line-height: 1.2;
+}
+
+.material-icons-outlined-menu{
+    font-family: Material Icons;
+    font-size: 50px;
+    color: grey;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.material-icons-outlined-x{
+    font-family: Material Icons;
+    font-size: 50px;
+    color: grey;
+    
+    margin-right: 25px;
+    justify-self: end;
+}
+
+/* 
+footer{
+    position: relative;
+    bottom: 5px;
+} */
+
+
+
+
+
+
+/* ------- TABLET ------- */
+
+@media screen and (min-width: 500px) {
+    .navbar{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+    a.navitem1{
+        font-size: 20px;
+        grid-column: 1 / span 1;
+    }
+    a.navitem2{
+        font-size: 20px;
+        grid-column: 2 / span 1;
+    }
+    a.navitem3{
+        font-size: 20px;
+        grid-column: 3 / span 1;
+    }
+    a.navitem4{
+        font-size: 20px;
+        grid-column: 4 / span 1;
+    }
 }
 
 
-/* .navbar{
-    list-style-type: none;
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0;
-    right 0;
-} */
 
-/* .navitem {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 25px;
-} */
+
+
+
 
 
