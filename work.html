@@ -11,6 +11,8 @@
     <link rel= "stylesheet" href= "css/basicstyle.css" />
     <link rel= "stylesheet" href= "css/workstyle.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
@@ -26,15 +28,18 @@
     <nav>
             
         <!-- NAME -->
-        <div>
+        <div class="title_page">
             <h1 class="name">my work experience</h1>
         </div>
         <!-- NAME -->
         
-        <hr>
+        <hr class="remove_line">
 
         <!-- NAVIGATION BAR -->
-        <div class= "navbar">
+        <div class= "navbar" id="navbar_js">
+            <span class="material-icons-outlined-x navitem navitem5" id="x">
+                close
+            </span>
             <a href = "home.html" class = "navitem navitem1">Home</a>
             <a href= "work.html" class = "navitem navitem2 currentpage">Work</a>
             <a href = "about.html" class = "navitem navitem3" >About</a>
@@ -53,6 +58,10 @@
     
     <!-- MAIN -->
     <main>
+
+        <span class="material-icons-outlined-menu" id="menu_icon">
+            menu
+        </span>
 
         <br>
 
@@ -121,6 +130,8 @@
     <!-- FOOTER -->
 
     <br>
+
+    <script src="myscript.js"></script>
 
 
 </body>

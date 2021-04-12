@@ -2,13 +2,28 @@
 
 
 
-var menu_icon = document.querySelector("material-icons-outlined-menu");
-var menu = document.querySelector("menu_web");
+var menu_icon = document.getElementById("menu_icon")
+var menu = document.getElementById("navbar_js");
+var x = document.getElementById("x");
+
+// var main = document.getElementsByTagName("main");
 
 
 menu_icon.addEventListener("click", function() {
     menu_icon.style.display = "none";
-    menu.style.display = "";
+    menu.style.display = "grid";
 })
+
+x.addEventListener("click", function() {
+    menu_icon.style.display = "block";
+    menu.style.display = "none";
+})
+
+
+// main.addEventListener("click", function() {
+//     menu_icon.style.display = "block";
+//     menu.style.display = "none";
+// })
+
 
 

@@ -13,6 +13,8 @@
     <link rel= "stylesheet" href= "css/basicstyle.css" />
     <link rel= "stylesheet" href= "css/aboutstyle.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
     <title>Home</title>
 
@@ -32,7 +34,7 @@
     <nav>
 
         <!-- NAME -->
-        <div>
+        <div class="title_page">
             <h1 class="name">get to know me</h1>
         </div>
         <!-- NAME -->
@@ -40,7 +42,10 @@
         <hr>
 
         <!-- NAVIGATION BAR -->
-        <div class= "navbar">
+        <div class= "navbar" id ="navbar_js">
+            <span class="material-icons-outlined-x navitem navitem5" id="x">
+                close
+            </span>
             <a href = "home.html" class = "navitem navitem1">Home</a>
             <a href= "work.html" class = "navitem navitem2">Work</a>
             <a href = "about.html" class = "navitem navitem3 currentpage" >About</a>
@@ -48,7 +53,7 @@
         </div>
         <!-- NAVIGATION BAR -->
 
-        <hr>
+        <hr class="remove_line">
         
     </nav>
     <!-- HEADER -->
@@ -59,6 +64,10 @@
 
     <!-- MAIN -->
     <main>
+
+        <span class="material-icons-outlined-menu" id="menu_icon">
+            menu
+        </span>
 
         <br>
 
@@ -125,6 +134,8 @@
     <!-- FOOTER -->
 
     <br>
+
+    <script src="myscript.js"></script>
 
 
 </body>
