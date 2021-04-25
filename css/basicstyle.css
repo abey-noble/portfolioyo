@@ -5,6 +5,9 @@
     font-family: 'Lateef', cursive;
 } */
 
+body{
+    /* background-color: #F8C9A0; */
+}
 
 
 
@@ -35,6 +38,8 @@ nav .title_page{
     justify-self: start;
     align-self: center;
     font-weight: normal;
+    border: solid 3px #EDA192;
+    box-shadow: 10px 10px #EDA192;
 }
 
 
@@ -50,11 +55,15 @@ a.navitem:visited{
 }
 a.navitem:hover, a.navitem:active{
     text-decoration: line-through;  
+    /* background-color: #EDA192; */
+    font-style: italic;
 }
 a.currentpage:link, a.currentpage:visited{
     text-decoration: line-through;   
 }
 nav div a{
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -65,6 +74,7 @@ hr, div hr{
     margin: auto;
     margin: auto;
     width: 80%;
+    color: #EDA192;
 }
 
 /* FOOTER */
@@ -183,6 +193,14 @@ footer{
         display: none;
     }
 
+}
+
+
+@media screen and (min-width: 1200px){
+    p{
+        font-size: 1.5em;
+    }
+    
 }
 
 

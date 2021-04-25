@@ -1,54 +1,300 @@
 main p{
     font-size: 20px;
     text-align: left;
-    width: 77%;
+    /* width: 77%; */
     margin-left: auto;
     margin-right: auto;
 }
 
 img {
-    width: 77%;
+    /* width: 77%; */
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .home_grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    /* text-align: center; */
-    margin-left: auto;
-    margin-right: auto;
-    
-
-}
-
-.container1{
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    
-    /* justify-self: center; */
-
-}
-
-.container2{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    
-    /* justify-self: stretch; */
-    
+    column-gap: 5%;
+    row-gap: 5%;
 }
 
 
-.container1 p, .container2 p{
-    /* margin-left: 0;
-    margin-right: 0; */
-    /* border-radius: 10px; */
-    border: 2px solid black;
-    background-color: rgb(252, 252, 252);
+.container1, .container2{
+    /* border: 2px solid black; */
+    /* background-color: rgb(252, 252, 252); */
+    /* background-color: #e8e9eb; */
+    border: solid 3px #EDA192;
+    box-shadow: 10px 10px #EDA192;
     padding: 20px;
     font-size: 30px;
     text-align: center;
+    justify-self: center;
+    
+    /* width: 100%; */
+}
+.container1 a:link, .container2 a:link{
+    text-decoration: none;
+    color:black;
+}
+
+.container1 a:visited, .container2 a:visited{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.container1 a:hover, .container2 a:hover{
+    background-color: #EDA192;
+}
+
+.container1 a:active, .container2 a:active{
+    background-color: #EDA192;
+    font-style: italic;
+}
+
+.container1:hover, .container2:hover{
+    background-color: #EDA192;
+    font-style: italic;
+}
+
+.container2, .container1{
+    justify-self: stretch;
+}
+.pic_and_bio{
+    column-gap: 5%;
+    row-gap: 5%;
+}
+
+
+
+
+/* NEED TO WORK ON THIS PART LATER */
+
+.flip{
+    /* width: 200px;
+    height: 300px; */
+    /* background-color: transparent; */
+    /* border: 5px solid #EDA192; */
+    perspective: 1000px;
+}
+
+.inner_flip{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip:hover, .inner_flip{
+    transform: rotateX(180deg);
+}
+
+.front_flip, .back_flip{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.front_flip{
+    border: 5px solid #EDA192;
+}
+
+.back_flip{
+    background-color: #EDA192;
+    transform: rotateX(180deg);
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px){
+    .pic_and_bio{
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        /* width: 100%; */
+     
+        /* width: 77%; */
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+
+    .p_b_container1{
+        /* margin: 0; */
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        justify-self: center;
+    }
+
+    .p_b_container2{
+        margin: 0;
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        justify-self: center;
+        width: 77%;
+        margin-top: 2.5%;
+    }
+    img#main_content.p_b_container1{
+    
+        /* object-fit: cover; */
+        width: 77%;
+        
+    }
+
+
+    .home_grid{
+        width: 77%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        /* text-align: center; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container1{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        
+        /* justify-self: center; */
+    }
+    
+    .container2{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        
+        /* justify-self: stretch; */
+    }
+
+
+
+}
+
+
+
+
+
+/* ------- TABLET ------- */
+
+@media screen and (min-width: 500px){
+    .pic_and_bio{
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 77%; */
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+
+    .p_b_container1{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        justify-self: center;
+    }
+
+    .p_b_container2{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        justify-self: center;
+        width: 77%;
+        /* margin-top: 2.5%; */
+    }
+    img#main_content.p_b_container1{
+    
+        /* object-fit: cover; */
+        width: 77%;
+        
+    }
+
+
+    .home_grid{
+        width: 77%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        /* text-align: center; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container1{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        
+        /* justify-self: center; */
+    }
+    
+    .container2{
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        
+        /* justify-self: stretch; */
+    }
+}
+
+
+
+@media screen and (min-width: 1000px){
+    .pic_and_bio{
+        margin-left: auto;
+        margin-right: auto;
+        width: 77%;
+        display: grid;
+        grid-template-rows: auto ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .p_b_container1{
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .p_b_container2{
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+        width: 100%;
+    }
+
+    img#main_content.p_b_container1{
+        object-fit: contain;
+        width: 100%;
+        
+    }
+
+
+
+
+    .home_grid{
+        width: 77%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        /* text-align: center; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .container1{
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        
+        /* justify-self: center; */
+    }
+    
+    .container2{
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        
+        /* justify-self: stretch; */
+    }
+
 }
 
